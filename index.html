@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+    <h2>Window object returned:</h2>
+    <h4 id="eWin"></h4>
+
+    <script>
+        var url = 'http://arxiv.org'; // this url also don't work
+        // var url = 'https://scholar.google.com/';
+        nw.Window.open(url, {
+            "show": false
+        }, function(eWin) {
+            console.log("Window object returned: " + eWin);
+            console.log(eWin);
+            document.getElementById("eWin").innerHTML = eWin + "";
+        });
+    </script>
+</body>
+</html>
